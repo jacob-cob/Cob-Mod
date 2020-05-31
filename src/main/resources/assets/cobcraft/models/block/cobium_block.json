@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "cobcraft:blocks/cobium_block"
+    }
+}

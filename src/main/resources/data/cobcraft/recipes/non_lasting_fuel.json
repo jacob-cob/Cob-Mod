@@ -1,0 +1,36 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cobcraft:cobium"
+    },
+    {
+      "item": "cobcraft:cobium"
+    },
+    {
+      "item": "cobcraft:hardened_ice_shard"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "cobcraft:non_lasting_fuel",
+    "count": 3
+  }
+}

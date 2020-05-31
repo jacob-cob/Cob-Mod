@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "cobcraft:blocks/tropical_planks",
+        "top": "cobcraft:blocks/tropical_planks",
+        "side": "cobcraft:blocks/tropical_planks"
+    }
+}

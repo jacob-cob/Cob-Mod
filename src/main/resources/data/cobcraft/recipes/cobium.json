@@ -1,0 +1,35 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cobcraft:hardened_ice_shard"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "cobcraft:hardened_ice_shard"
+    },
+    {
+      "item": "cobcraft:hardened_ice_shard"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "cobcraft:hardened_ice_shard"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "cobcraft:cobium"
+  }
+}

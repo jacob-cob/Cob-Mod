@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "RRR",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bread"
+    },
+    "R": {
+      "item": "minecraft:beef"
+    }
+  },
+  "result": {
+    "item": "cobcraft:long_burger"
+  }
+}

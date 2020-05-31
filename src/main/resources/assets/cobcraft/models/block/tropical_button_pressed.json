@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_pressed",
+    "textures": {
+        "texture": "cobcraft:blocks/tropical_planks"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "cobcraft:block/chair" },
+        "facing=south": { "model": "cobcraft:block/chair", "y": 180 },
+        "facing=west":  { "model": "cobcraft:block/chair", "y": 270 },
+        "facing=east":  { "model": "cobcraft:block/chair", "y": 90 }
+    }
+}

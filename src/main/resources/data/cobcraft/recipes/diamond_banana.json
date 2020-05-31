@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BRB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:diamond"
+    },
+    "R": {
+      "item": "cobcraft:banana"
+    }
+  },
+  "result": {
+    "item": "cobcraft:diamond_banana"
+  }
+}

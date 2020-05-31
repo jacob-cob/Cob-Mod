@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "BEB",
+    "IPI"
+  ],
+  "key": {
+    "I": {
+      "item": "cobcraft:cobium"
+    },
+    "B": {
+      "item": "minecraft:redstone"
+    },
+    "E": {
+      "item": "minecraft:piston"
+    },
+    "P": {
+      "item": "cobcraft:cobium_pickaxe"
+    }
+  },
+  "result": {
+    "item": "cobcraft:quarry"
+  }
+}

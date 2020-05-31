@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " BR",
+    "RRR",
+    " I "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:blue_wool"
+    },
+    "R": {
+      "item": "minecraft:gray_wool"
+    },
+    "I": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "result": {
+    "item": "cobcraft:chair"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC",
+    " E",
+    " E"
+  ],
+  "key": {
+    "C": {
+      "item": "cobcraft:cobium"
+    },
+    "E": {
+      "item": "minecraft:end_rod"
+    }
+  },
+  "result": {
+    "item": "cobcraft:cobium_hoe"
+  }
+}

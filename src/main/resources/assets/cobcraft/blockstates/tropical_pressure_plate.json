@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "cobcraft:block/tropical_pressure_plate" },
+        "powered=true": { "model": "cobcraft:block/tropical_pressure_plate_down" }
+    }
+}

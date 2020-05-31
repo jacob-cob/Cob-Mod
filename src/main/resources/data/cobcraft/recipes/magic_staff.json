@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BHB",
+    " B ",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "H": {
+      "item": "cobcraft:hardened_ice"
+    }
+  },
+  "result": {
+    "item": "cobcraft:magic_staff"
+  }
+}

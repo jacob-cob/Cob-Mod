@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IBI",
+    "BEB",
+    "IBI"
+  ],
+  "key": {
+    "B": {
+      "item": "cobcraft:cobium"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "cobcraft:mystery_portal_crate",
+    "count": 3
+  }
+}
