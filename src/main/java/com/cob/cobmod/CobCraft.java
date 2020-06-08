@@ -6,11 +6,16 @@ import org.apache.logging.log4j.Logger;
 import com.cob.cobmod.init.BiomeInit;
 import com.cob.cobmod.init.BlockInitNew;
 import com.cob.cobmod.init.DimensionInit;
+import com.cob.cobmod.init.EnchantmentInit;
 import com.cob.cobmod.init.ItemInit;
 import com.cob.cobmod.init.ItemInitNew;
+import com.cob.cobmod.init.ModEntityTypes;
 import com.cob.cobmod.init.ModTileEntityTypes;
+import com.cob.cobmod.init.SoundInit;
+import com.cob.cobmod.objects.blocks.TomatoCrop;
 import com.cob.cobmod.world.gen.IceOreGen;
 
+import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -43,10 +48,13 @@ public class CobCraft {
 		final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.addListener(this::setup);
 		modEventBus.addListener(this::doClientStuff);
-
+		
+		SoundInit.SOUNDS.register(modEventBus);
+		EnchantmentInit.ENCHANTMENTS.register(modEventBus);
 		ItemInitNew.ITEMS.register(modEventBus);
 		BlockInitNew.BLOCKS.register(modEventBus);
 		ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 		
 		BiomeInit.BIOMES.register(modEventBus);
 		DimensionInit.MOD_DIMENSIONS.register(modEventBus);
@@ -60,7 +68,7 @@ public class CobCraft {
     {
     	final IForgeRegistry<Item> registry = event.getRegistry();
     	
-    	BlockInitNew.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+    	BlockInitNew.BLOCKS.getEntries().stream().filter(block -> !(block.get() instanceof TomatoCrop)).map(RegistryObject::get).forEach(block -> {
 			final Item.Properties properties = new Item.Properties().group(ExtraGroup.instance);
 			final BlockItem blockItem = new BlockItem(block, properties);
 			blockItem.setRegistryName(block.getRegistryName());
@@ -75,7 +83,9 @@ public class CobCraft {
 	
 	
 	private void setup(final FMLCommonSetupEvent event) {
-
+		ComposterBlock.registerCompostable(1, ItemInit.banana);
+		ComposterBlock.registerCompostable(0.4f, ItemInit.tomato);
+		ComposterBlock.registerCompostable(0.1f, ItemInitNew.TOMATO_SEED.get());
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {

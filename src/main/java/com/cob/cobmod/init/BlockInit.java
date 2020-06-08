@@ -58,7 +58,6 @@ public class BlockInit
 		event.getRegistry().register(new BlockItem(mossy_stone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("mossy_stone"));
 		event.getRegistry().register(new BlockItem(tropical_planks, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("tropical_planks"));
 		event.getRegistry().register(new BlockItem(cobium_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("cobium_block"));
-		event.getRegistry().register(new BlockItem(cobium_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("cobium_block"));
 		event.getRegistry().register(new BlockItem(lithium_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("lithium_ore"));
 	}
 }

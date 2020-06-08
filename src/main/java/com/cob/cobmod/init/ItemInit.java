@@ -51,6 +51,8 @@ public class ItemInit
 	public static final Item banana = null;
 	public static final Item long_burger = null;
 	public static final Item candy = null;
+	public static final Item tomato = null;
+	public static final Item cheese = null;
 	
 	// Tools
 	public static final Item cobium_sword = null;
@@ -78,11 +80,13 @@ public class ItemInit
 		event.getRegistry().register(new InfiFuelItem(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("non_lasting_fuel"));
 		
 		// Food
+		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(2).saturation(0.6f).build())).setRegistryName("tomato"));
+		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(4).saturation(0.8f).build())).setRegistryName("cheese"));
 		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(5).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 1200, 2), 0.4f).build())).setRegistryName("banana"));
 		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(20).saturation(5.0f).meat().effect(new EffectInstance(Effects.SLOWNESS, 6000, 2), 1.0f).build())).setRegistryName("long_burger"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(1).saturation(0f).setAlwaysEdible().fastToEat().effect(new EffectInstance(Effects.SPEED, 100, 10), 0.2f).build())).setRegistryName("candy"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(5).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 6000, 7), 1.0f).build())).setRegistryName("diamond_banana"));
-		event.getRegistry().register(new EnchantedItem(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(5).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 12000, 20), 1.0f).build())).setRegistryName("enchanted_diamond_banana"));
+		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(1).saturation(0.1f).setAlwaysEdible().fastToEat().effect(new EffectInstance(Effects.SPEED, 100, 10), 0.2f).build())).setRegistryName("candy"));
+		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(5).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 6000, 7), 1.0f).effect(new EffectInstance(Effects.STRENGTH, 3000, 4), 1.0f).effect(new EffectInstance(Effects.SPEED, 3000, 3), 1.0f).build())).setRegistryName("diamond_banana"));
+		event.getRegistry().register(new EnchantedItem(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(5).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 12000, 20), 1.0f).effect(new EffectInstance(Effects.STRENGTH, 6000, 7), 1.0f).effect(new EffectInstance(Effects.SPEED, 6000, 5), 1.0f).build())).setRegistryName("enchanted_diamond_banana"));
 		
 		//Tools
 		event.getRegistry().register(new SwordItem(CobItemTier.EXAMPLE, 10, 3.0f, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("cobium_sword"));

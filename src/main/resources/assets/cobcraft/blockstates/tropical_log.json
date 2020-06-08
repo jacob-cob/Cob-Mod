@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "cobcraft:block/tropical_log" },
+        "axis=z":   { "model": "cobcraft:block/tropical_log", "x": 90 },
+        "axis=x":   { "model": "cobcraft:block/tropical_log", "x": 90, "y": 90 }
+    }
+}

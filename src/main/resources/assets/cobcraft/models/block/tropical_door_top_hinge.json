@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top_rh",
+    "textures": {
+        "bottom": "cobcraft:blocks/tropical_door_bottom",
+        "top": "cobcraft:blocks/tropical_door_top"
+    }
+}

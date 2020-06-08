@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "cobcraft:blocks/tomato_crop_stage2"
+    }
+}

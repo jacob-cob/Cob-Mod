@@ -11,6 +11,7 @@ import net.minecraft.world.biome.provider.BiomeProvider;
 
 public class AncientBiomeProvider extends BiomeProvider{
 
+	@SuppressWarnings("unused")
 	private Random rand;
 	
 	public AncientBiomeProvider() {

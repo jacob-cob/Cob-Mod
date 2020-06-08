@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cobcraft:tropical_log"
+    }
+  ],
+  "result": {
+    "item": "cobcraft:tropical_planks",
+    "count": 4
+  }
+}

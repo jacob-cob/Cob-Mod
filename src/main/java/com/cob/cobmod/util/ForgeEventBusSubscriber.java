@@ -1,4 +1,4 @@
-package com.cob.cobmod.util.helpers;
+package com.cob.cobmod.util;
 
 import com.cob.cobmod.CobCraft;
 import com.cob.cobmod.init.DimensionInit;

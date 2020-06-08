@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "cobcraft:blocks/tropical_log_top",
+        "side": "cobcraft:blocks/tropical_log"
+    }
+}

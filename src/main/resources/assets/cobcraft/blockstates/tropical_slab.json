@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "cobcraft:block/tropical_slab" },
+        "type=top": { "model": "cobcraft:block/tropical_slab_top" },
+        "type=double": { "model": "cobcraft:block/tropical_planks" }
+    }
+}

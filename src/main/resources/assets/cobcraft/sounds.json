@@ -1,0 +1,32 @@
+{
+	"entity.glow_bug.ambient": {
+		"category": "entity",
+		"subtitle": "entity.glow_bug.ambient",
+		"sounds": [
+			{
+				"name": "cobcraft:entity/entity.glow_bug.ambient",
+				"stream": true
+			}
+		]
+	},
+	"entity.glow_bug.hurt": {
+		"category": "entity",
+		"subtitle": "entity.glow_bug.hurt",
+		"sounds": [
+			{
+				"name": "cobcraft:entity/entity.glow_bug.hurt",
+				"stream": true
+			}
+		]
+	},
+	"entity.glow_bug.death": {
+		"category": "entity",
+		"subtitle": "entity.glow_bug.death",
+		"sounds": [
+			{
+				"name": "cobcraft:entity/entity.glow_bug.death",
+				"stream": true
+			}
+		]
+	}
+}
