@@ -28,5 +28,65 @@
 				"stream": true
 			}
 		]
+	},
+	"entity.ancient_giant.ambient": {
+		"category": "entity",
+		"subtitle": "entity.ancient_giant.ambient",
+		"sounds": [
+			{
+				"name": "cobcraft:entity/entity.ancient_giant.ambient",
+				"stream": true
+			}
+		]
+	},
+	"entity.ancient_giant.hurt": {
+		"category": "entity",
+		"subtitle": "entity.ancient_giant.hurt",
+		"sounds": [
+			{
+				"name": "cobcraft:entity/entity.ancient_giant.hurt",
+				"stream": true
+			}
+		]
+	},
+	"entity.ancient_giant.death": {
+		"category": "entity",
+		"subtitle": "entity.ancient_giant.death",
+		"sounds": [
+			{
+				"name": "cobcraft:entity/entity.ancient_giant.death",
+				"stream": true
+			}
+		]
+	},
+	"disc.coffin_dance": {
+		"category": "disc",
+		"subtitle": "coffin_dance",
+		"sounds": [
+			{
+				"name": "cobcraft:disc/coffin_dance",
+				"stream": true
+			}
+		]
+	},
+	"disc.soothing_music": {
+		"category": "disc",
+		"subtitle": "soothing_music",
+		"sounds": [
+			{
+				"name": "cobcraft:disc/soothing_music",
+				"stream": true
+			}
+		]
+	},
+	"disc.party_revive": {
+		"category": "disc",
+		"subtitle": "party_revive",
+		"sounds": [
+			{
+				"name": "cobcraft:disc/party_revive",
+				"stream": true
+			}
+		]
 	}
 }

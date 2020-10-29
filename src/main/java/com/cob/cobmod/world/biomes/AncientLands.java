@@ -1,7 +1,5 @@
 package com.cob.cobmod.world.biomes;
 
-import com.cob.cobmod.init.ModEntityTypes;
-
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
@@ -18,8 +16,10 @@ public class AncientLands extends Biome {
 
 	public AncientLands(Builder biomeBuilder) {
 		super(biomeBuilder);
-		this.addSpawn(EntityClassification.MONSTER, new SpawnListEntry(EntityType.SILVERFISH, 10, 4, 10));
-		this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(ModEntityTypes.GLOW_BUG.get(), 20, 1, 3));
+		this.addSpawn(EntityClassification.MONSTER, new SpawnListEntry(EntityType.ZOMBIE, 20, 1, 3));
+		this.addSpawn(EntityClassification.MONSTER, new SpawnListEntry(EntityType.WITHER_SKELETON, 20, 1, 3));
+		this.addSpawn(EntityClassification.MONSTER, new SpawnListEntry(EntityType.ENDERMAN, 5, 4, 10));
+		this.addSpawn(EntityClassification.WATER_CREATURE, new SpawnListEntry(EntityType.SQUID, 10, 1, 3));
 		this.addCarver(GenerationStage.Carving.AIR,
 				Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285717F)));
 		this.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION,

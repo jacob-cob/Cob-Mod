@@ -34,7 +34,7 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 	{
 		if(!initialised) init();
 		tick++;
-		if(tick == 40) 
+		if(tick == 20) 
 		{
 			tick = 0;
 			if(y > 2) execute();
@@ -50,10 +50,10 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 	}
 	private void execute() {
 		int index = 0;
-		Block[] blocksRemoved = new Block[25];
-		for(int x = 0; x < 5; x++) 
+		Block[] blocksRemoved = new Block[9];
+		for(int x = 0; x < 3; x++) 
 		{
-			for(int z = 0; z < 5; z++)
+			for(int z = 0; z < 3; z++)
 			{
 				BlockPos posToBreak = new BlockPos(this.x + x, this.y, this.z + z);
 				blocksRemoved[index] = this.world.getBlockState(posToBreak).getBlock();
@@ -74,7 +74,7 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity
 			if(dropBlock)
 			{
 				TileEntity tileentity = blockstate.hasTileEntity() ? world.getTileEntity(pos) : null;
-				Block.spawnDrops(blockstate, world, this.pos.add(0, 3, 0), tileentity, entity, ItemStack.EMPTY);
+				Block.spawnDrops(blockstate, world, this.pos.add(0, 2, 0), tileentity, entity, ItemStack.EMPTY);
 			}
 			return world.setBlockState(pos, ifluidstate.getBlockState(), 3);
 		}

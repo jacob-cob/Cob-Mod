@@ -5,8 +5,10 @@ import com.cob.cobmod.objects.blocks.Chair;
 import com.cob.cobmod.objects.blocks.QuarryBlock;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SandBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -35,12 +37,12 @@ public class BlockInit
 	public static void registerBlocks(final RegistryEvent.Register<Block> event)
 	{
 		event.getRegistry().register(new Block(Block.Properties.create(Material.CAKE).hardnessAndResistance(1f, 0.1f).sound(SoundType.SLIME).slipperiness(0.7f)).setRegistryName("meat_block"));
-		event.getRegistry().register(new Block(Block.Properties.create(Material.SAND).hardnessAndResistance(0.5f, 2.5f).sound(SoundType.SAND)).setRegistryName("white_sand"));
+		event.getRegistry().register(new SandBlock(16777215, Block.Properties.create(Material.SAND, MaterialColor.SAND).hardnessAndResistance(0.5f, 2.5f).sound(SoundType.SAND)).setRegistryName("white_sand"));
 		event.getRegistry().register(new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2f, 15f).sound(SoundType.WOOD)).setRegistryName("tropical_planks"));
-		event.getRegistry().register(new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(1.5f, 30f).sound(SoundType.STONE).slipperiness(0.7f)).setRegistryName("mossy_stone"));
+		event.getRegistry().register(new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(1.5f, 30f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(0).slipperiness(0.7f)).setRegistryName("mossy_stone"));
 		event.getRegistry().register(new Chair(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.3f, 10.0f).sound(SoundType.WOOD)).setRegistryName("chair"));
 		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(0.8f, 1000000.0f).sound(SoundType.METAL)).setRegistryName("mystery_portal_crate"));
-		event.getRegistry().register(new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(35.0f, 1000000.0f).sound(SoundType.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(3)).setRegistryName("hardened_ice"));
+		event.getRegistry().register(new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(35.0f, 1000000.0f).sound(SoundType.GLASS).harvestTool(ToolType.PICKAXE).harvestLevel(3).lightValue(9)).setRegistryName("hardened_ice"));
 		event.getRegistry().register(new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(5.0f, 9.0f).sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(3)).setRegistryName("lithium_ore"));
 		event.getRegistry().register(new QuarryBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(10.0f, 1000000.0f).sound(SoundType.ANVIL).harvestTool(ToolType.PICKAXE).harvestLevel(3)).setRegistryName("quarry"));
 		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(60.0f, 1000000.0f).sound(SoundType.ANVIL).harvestTool(ToolType.PICKAXE).harvestLevel(3)).setRegistryName("cobium_block"));

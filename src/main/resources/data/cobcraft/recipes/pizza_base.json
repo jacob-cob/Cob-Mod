@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "cobcraft:dough"
+  },
+  "result": "cobcraft:pizza_base",
+  "count": 1
+}

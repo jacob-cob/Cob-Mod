@@ -8,7 +8,7 @@
         "facing=south,half=lower,hinge=right,open=false": { "model": "cobcraft:block/tropical_door_bottom_hinge", "y": 90 },
         "facing=west,half=lower,hinge=right,open=false":  { "model": "cobcraft:block/tropical_door_bottom_hinge", "y": 180 },
         "facing=north,half=lower,hinge=right,open=false": { "model": "cobcraft:block/tropical_door_bottom_hinge", "y": 270 },
-        "facing=east,half=lower,hinge=left,open=true":  { "model": "cobcraft:block/tropicaSl_door_bottom_hinge", "y": 90 },
+        "facing=east,half=lower,hinge=left,open=true":  { "model": "cobcraft:block/tropical_door_bottom_hinge", "y": 90 },
         "facing=south,half=lower,hinge=left,open=true": { "model": "cobcraft:block/tropical_door_bottom_hinge", "y": 180 },
         "facing=west,half=lower,hinge=left,open=true":  { "model": "cobcraft:block/tropical_door_bottom_hinge", "y": 270 },
         "facing=north,half=lower,hinge=left,open=true": { "model": "cobcraft:block/tropical_door_bottom_hinge" },

@@ -17,7 +17,7 @@ public class TropicalTree extends Tree {
 	public static final TreeFeatureConfig TROPICAL_TREE_CONFIG = (new TreeFeatureConfig.Builder(
 			new SimpleBlockStateProvider(BlockInitNew.TROPICAL_LOG.get().getDefaultState()),
 			new SimpleBlockStateProvider(BlockInitNew.TROPICAL_LEAVES.get().getDefaultState()),
-			new BlobFoliagePlacer(3, 0))).baseHeight(7).heightRandA(4).foliageHeight(4).ignoreVines()
+			new BlobFoliagePlacer(3, 0))).baseHeight(6).heightRandA(2).foliageHeight(3).ignoreVines()
 					.setSapling((IPlantable) BlockInitNew.TROPICAL_SAPLING.get()).build();
 	@Override
 	protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean b) {

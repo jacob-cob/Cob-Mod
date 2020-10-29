@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "cobcraft:blocks/acidic_liquid"
+    }
+}

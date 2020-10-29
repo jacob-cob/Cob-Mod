@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " T ",
+    "TCT",
+    " T "
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "C": {
+      "item": "cobcraft:disc_cob"
+    }
+  },
+  "result": {
+    "item": "cobcraft:party_revive"
+  }
+}

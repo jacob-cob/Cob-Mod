@@ -36,7 +36,7 @@ public class FloatationEnchantment extends Enchantment {
 		return true;
 	}
 	@Override
-	public boolean isTreasureEnchantment() {
+	public boolean isCurse() {
 		return true;
 	}
 	@Override
@@ -54,8 +54,8 @@ public class FloatationEnchantment extends Enchantment {
 					&& EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.FLOATATION.get(),
 							playerIn.getItemStackFromSlot(EquipmentSlotType.FEET)) > 0) {
 			
-				if(playerIn.isCrouching() == true) {
-					playerIn.addPotionEffect(new EffectInstance(Effects.LEVITATION, 2, 10));
+				if(playerIn.isCrouching() == false) {
+					playerIn.addPotionEffect(new EffectInstance(Effects.LEVITATION, 0, 10));
 				}
 			}
 		}

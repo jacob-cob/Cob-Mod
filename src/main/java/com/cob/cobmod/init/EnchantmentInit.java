@@ -20,7 +20,12 @@ public class EnchantmentInit {
 	public static final RegistryObject<Enchantment> FLOATATION = ENCHANTMENTS.register("floatation",
 			() -> new FloatationEnchantment(Rarity.VERY_RARE, EnchantmentType.ARMOR_FEET,
 					new EquipmentSlotType[] { EquipmentSlotType.FEET }));
+	
 	public static final RegistryObject<Enchantment> HEALING = ENCHANTMENTS.register("healing",
 			() -> new HealingEnchantment(Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST,
 					new EquipmentSlotType[] { EquipmentSlotType.CHEST }));
+	
+	public static final RegistryObject<Enchantment> DOUBLE_JUMP = ENCHANTMENTS.register("double_jump",
+			() -> new HealingEnchantment(Rarity.VERY_RARE, EnchantmentType.ARMOR_FEET,
+					new EquipmentSlotType[] { EquipmentSlotType.FEET }));
 }

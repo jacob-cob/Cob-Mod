@@ -1,0 +1,8 @@
+  
+{
+	"replace": false,
+	"values": [
+		"cobcraft:acidic_liquid_flowing",
+		"cobcraft:acidic_liquid_fluid"
+	]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "cobcraft:lithium_ore"
+  },
+  "result": "cobcraft:lithium",
+  "experience": 3,
+  "cookingtime": 100
+}

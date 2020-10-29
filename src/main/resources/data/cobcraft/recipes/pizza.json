@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C",
+    "T",
+    "B"
+  ],
+  "key": {
+    "C": {
+      "item": "cobcraft:cheese"
+    },
+    "T": {
+      "item": "cobcraft:tomato"
+    },
+    "B": {
+      "item": "cobcraft:pizza_base"
+    }
+  },
+  "result": {
+    "item": "cobcraft:pizza"
+  }
+}

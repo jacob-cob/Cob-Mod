@@ -56,12 +56,16 @@ public class HealingEnchantment extends Enchantment {
 					&& EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.HEALING.get(),
 							playerIn.getItemStackFromSlot(EquipmentSlotType.CHEST)) > 0) {
 				heal++;
-				if (heal >= 100) {
-					playerIn.addPotionEffect(new EffectInstance(Effects.INSTANT_HEALTH, 0, 10));
+				if (heal >= 400 && heal <= 405) {
+					playerIn.addPotionEffect(new EffectInstance(Effects.REGENERATION, 1, 10));
+				}
+				if (heal > 405) {
+					playerIn.removeActivePotionEffect(Effects.REGENERATION);
 					heal = 0;
 				}
 			} else {
-				playerIn.removeActivePotionEffect(Effects.INSTANT_HEALTH);
+				playerIn.removeActivePotionEffect(Effects.REGENERATION);
+				heal = 0;
 			}
 		}
 	}

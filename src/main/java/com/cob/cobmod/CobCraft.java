@@ -7,15 +7,19 @@ import com.cob.cobmod.init.BiomeInit;
 import com.cob.cobmod.init.BlockInitNew;
 import com.cob.cobmod.init.DimensionInit;
 import com.cob.cobmod.init.EnchantmentInit;
+import com.cob.cobmod.init.FluidInit;
 import com.cob.cobmod.init.ItemInit;
 import com.cob.cobmod.init.ItemInitNew;
+import com.cob.cobmod.init.ModContainerTypes;
 import com.cob.cobmod.init.ModEntityTypes;
 import com.cob.cobmod.init.ModTileEntityTypes;
+import com.cob.cobmod.init.PotionInit;
 import com.cob.cobmod.init.SoundInit;
 import com.cob.cobmod.objects.blocks.TomatoCrop;
-import com.cob.cobmod.world.gen.IceOreGen;
+import com.cob.cobmod.world.gen.OreGen;
 
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -48,14 +52,20 @@ public class CobCraft {
 		final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.addListener(this::setup);
 		modEventBus.addListener(this::doClientStuff);
-		
+
 		SoundInit.SOUNDS.register(modEventBus);
+		PotionInit.POTIONS.register(modEventBus);
+		PotionInit.POTION_EFFECTS.register(modEventBus);
 		EnchantmentInit.ENCHANTMENTS.register(modEventBus);
-		ItemInitNew.ITEMS.register(modEventBus);
-		BlockInitNew.BLOCKS.register(modEventBus);
-		ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
-		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 		
+		ItemInitNew.ITEMS.register(modEventBus);
+		FluidInit.FLUIDS.register(modEventBus);
+		BlockInitNew.BLOCKS.register(modEventBus);
+		
+		ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+		ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
+		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
+
 		BiomeInit.BIOMES.register(modEventBus);
 		DimensionInit.MOD_DIMENSIONS.register(modEventBus);
 
@@ -64,24 +74,24 @@ public class CobCraft {
 	}
 
 	@SubscribeEvent
-    public static void onRegisterItems(final RegistryEvent.Register<Item> event) 
-    {
-    	final IForgeRegistry<Item> registry = event.getRegistry();
-    	
-    	BlockInitNew.BLOCKS.getEntries().stream().filter(block -> !(block.get() instanceof TomatoCrop)).map(RegistryObject::get).forEach(block -> {
-			final Item.Properties properties = new Item.Properties().group(ExtraGroup.instance);
-			final BlockItem blockItem = new BlockItem(block, properties);
-			blockItem.setRegistryName(block.getRegistryName());
-			registry.register(blockItem);
-		});
-   }
+	public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
+		final IForgeRegistry<Item> registry = event.getRegistry();
+
+		BlockInitNew.BLOCKS.getEntries().stream()
+				.filter(block -> !(block.get() instanceof TomatoCrop) && !(block.get() instanceof FlowingFluidBlock))
+				.map(RegistryObject::get).forEach(block -> {
+					final Item.Properties properties = new Item.Properties().group(ExtraGroup.instance);
+					final BlockItem blockItem = new BlockItem(block, properties);
+					blockItem.setRegistryName(block.getRegistryName());
+					registry.register(blockItem);
+				});
+	}
 
 	@SubscribeEvent
 	public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
 		BiomeInit.registerBiomes();
 	}
-	
-	
+
 	private void setup(final FMLCommonSetupEvent event) {
 		ComposterBlock.registerCompostable(1, ItemInit.banana);
 		ComposterBlock.registerCompostable(0.4f, ItemInit.tomato);
@@ -99,7 +109,7 @@ public class CobCraft {
 
 	@SubscribeEvent
 	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-		IceOreGen.generateOre();
+		OreGen.generateOre();
 	}
 
 	public static class JunkItemGroup extends ItemGroup {
@@ -114,6 +124,7 @@ public class CobCraft {
 			return new ItemStack(ItemInit.soggy_paper);
 		}
 	}
+
 	public static class ExtraGroup extends ItemGroup {
 		public static final ExtraGroup instance = new ExtraGroup(ItemGroup.GROUPS.length, "extrastab");
 

@@ -21,6 +21,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class BiomeInit {
 	public static final DeferredRegister<Biome> BIOMES = new DeferredRegister<>(ForgeRegistries.BIOMES,
 			CobCraft.MOD_ID);
+	
 	public static final RegistryObject<Biome> TROPICAL_ISLANDS = BIOMES.register("tropical_islands",
 			() -> new TropicalIslands(new Biome.Builder().precipitation(RainType.RAIN).scale(0.5f).temperature(0.7f)
 					.waterColor(10158079).waterFogColor(15135733)
@@ -59,8 +60,8 @@ public class BiomeInit {
 		registerBiome(ANCIENT_LANDS.get(),Type.WASTELAND);
 	}
 	
-	private static void registerBiome(Biome biome, Type... types) 
-	{
+	private static void registerBiome(Biome biome, Type... types) {
+		BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 100));
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addSpawnBiome(biome);
 	}

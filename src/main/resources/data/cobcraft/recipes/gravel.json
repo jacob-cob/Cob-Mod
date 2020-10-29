@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DWD",
+    "DDD"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "D": {
+      "item": "cobcraft:stone_debris"
+    }
+  },
+  "result": {
+    "item": "minecraft:gravel",
+    "count": 4
+  }
+}

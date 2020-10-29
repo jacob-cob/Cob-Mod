@@ -1,0 +1,49 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "cobcraft:items/phone_wallpaper"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"cobcraft:app": 0.0
+			},
+			"model": "cobcraft:item/phone"
+		},
+		
+		{
+			"predicate": {
+				"cobcraft:app": 0.2
+			},
+			"model": "cobcraft:item/phone/wallpaper"
+		},
+		
+		{
+			"predicate": {
+				"cobcraft:app": 0.4
+			},
+			"model": "cobcraft:item/phone/game"
+		},
+		
+		{
+			"predicate": {
+				"cobcraft:app": 0.6
+			},
+			"model": "cobcraft:item/phone/youtube"
+		},
+		
+		{
+			"predicate": {
+				"cobcraft:app": 0.8
+			},
+			"model": "cobcraft:item/phone/forum"
+		},
+		
+		{
+			"predicate": {
+				"cobcraft:app": 1.0
+			},
+			"model": "cobcraft:item/phone/messenger"
+		}
+	]
+}

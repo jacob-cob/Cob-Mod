@@ -44,10 +44,7 @@ public class GlowBugModel<T extends GlowBug> extends EntityModel<T> {
 
 	@Override
 	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-		Body.render(matrixStack, buffer, packedLight, packedOverlay);
-		Head.render(matrixStack, buffer, packedLight, packedOverlay);
-		Tummy.render(matrixStack, buffer, packedLight, packedOverlay);
-		Tail.render(matrixStack, buffer, packedLight, packedOverlay);
+		Body.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

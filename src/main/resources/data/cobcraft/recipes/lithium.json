@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "cobcraft:lithium_ore"
+  },
+  "result": "cobcraft:lithium",
+  "experience": 2,
+  "cookingtime": 200
+}
